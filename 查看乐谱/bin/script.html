@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<body> <script>
+ (function () {
+var ctx = com.mojang.minecraftpe.MainActivity.currentMainActivity.get();
+newLevel();
+var isshow=false;
+var pop;
+var showmode;
+function newLevel() 
+{
+   ctx=com.mojang.minecraftpe.MainActivity.currentMainActivity.get();
+   start();
+   print("长按关闭");
+}
+function leaveGame()
+{
+  try
+  {
+    ctx.runOnUiTread(new java.lang.Runnable({run:function(){try{
+      pop.dismiss();
+    }catch(error){print(error);}}}));
+  }
+  catch(error)
+  {
+    print("错误:"+error);
+  }
+}
+function showpicture()
+{
+  isshow=true;
+  ctx.runOnUiThread(new java.lang.Runnable({run:function(){
+    try
+    {
+      pop=new android.widget.PopupWindow(ctx);
+      var image=new android.widget.ImageView(ctx);
+      var Scroll=new android.widget.ScrollView(ctx);
+      var HorizontalScroll=new android.widget.HorizontalScrollView(ctx);
+      var line2=new android.widget.LinearLayout(ctx);
+      Scroll.addView(image);
+      HorizontalScroll.addView(Scroll);
+      line2.addView(HorizontalScroll);
+      
+      /*————————核心代码——————*/
+      var b=new android.graphics.BitmapFactory.Options();
+      b.inSampleSize=0;  //缩放倍数
+      var ob=new android.graphics.BitmapFactory.decodeFile("/sdcard/image.jpg",b);
+      image.setImageBitmap(ob);
+      /*————————核心代码——————*/
+      
+      
+      var line=new android.widget.LinearLayout(ctx);
+      line.setOrientation(1);
+      line.addView(line2);
+      
+      image.setOnLongClickListener(new android.view.View.OnLongClickListener({onLongClick:function(v){
+         try
+         {
+           pop.dismiss();
+           isshow=false;
+         }
+         catch(error)
+         {
+           var d=new android.app.AlertDialog.Builder(ctx);
+           d.setMessage("错误\n"+error.toString());
+           d.setTitle("ERROR");d.setNegativeButton("我知道了",new android.content.DialogInterface.OnClickListener({
+             onClick:function(){}}));
+           d.create.show();
+         }
+         return true;
+      }}));
+      pop.setContentView(line);
+      pop.setWidth(310);
+      pop.setHeight(225);
+      pop.showAtLocation(ctx.getWindow().getDecorView(),android.view.Gravity.LEFT|android.view.Gravity.TOP,0,0);
+    }
+    catch(error)
+    {
+      var d=new android.app.AlertDialog.Builder(ctx);
+      d.setMessage("错误\n"+error.toString());
+      d.setTitle("ERROR");
+      d.setNegativeButton("我知道了",new android.content.DialogInterface.OnClickListener({onClick:function(){}}));
+      d.create();
+      d.show();
+    }
+  }}));
+}
+function start()
+{   
+    var win;
+    ctx.runOnUiThread(new java.lang.Runnable({run:function(){try{
+    win=new android.widget.PopupWindow(ctx);
+    var button=new android.widget.Button(ctx);
+    button.setText("查看乐谱");
+    button.setTextSize(7);
+    button.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+      if(isshow)
+      {
+        print("已显示GUI");
+      }
+      else
+      {
+        showpicture();
+      }
+    }}));
+    button.setOnLongClickListener(new android.view.View.OnLongClickListener({onLongClick:function(v){try{
+      var dialog=new android.app.AlertDialog.Builder(ctx);
+      dialog.setTitle("设置-Settings");
+      var layout=new android.widget.LinearLayout(ctx);
+   
+      var radiogroup=new android.widget.RadioGroup(ctx);
+      var radio1=new android.widget.RadioButton(ctx);
+      radio1.setText("模式1");
+      radio1.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+        
+        showmode="ShowMode1";
+        
+      }}));
+      radiogroup.addView(radio1);
+      var radio2=new android.widget.RadioButton(ctx);
+      radio2.setText("模式2");
+      radio2.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+        
+        showmode="ShowMode2";
+        
+      }}));
+      radiogroup.addView(radio2);
+      var radio3=new android.widget.RadioButton(ctx);
+      radio3.setText("自定义");
+      radio3.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+       
+        var dialogchoose=new android.app.AlertDialog.Builder(ctx);
+        dialogchoose.setTitle("选择显示模式");
+        
+        var choosebutton1=new android.widget.Button(ctx);
+        var choosebutton2=new android.widget.Button(ctx);
+        var choosebutton3=new android.widget.Button(ctx);
+        var choosebutton4=new android.widget.Button(ctx);
+        choosebutton1.setText("左上");
+        choosebutton2.setText("左下");
+        choosebutton3.setText("右上");
+        choosebutton4.setText("右下");
+        
+        choosebutton1.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+          showmode="ShowModeLeftUp";
+          }}));
+        choosebutton2.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+          showmode="ShowModeLeftDown";
+          }}));
+        choosebutton3.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+          showmode="ShowModeRightUp";
+          }}));
+        choosebutton1.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+          showmode="ShowModeRightDown";
+          }}));
+        
+        var chooselayout=new android.widget.LinearLayout(ctx);
+        chooselayout.addView(choosebutton1);
+        chooselayout.addView(choosebutton2);
+        chooselayout.addView(choosebutton3);
+        chooselayout.addView(choosebutton4);
+        dialogchoose.setView(chooselayout);
+        dialogchoose.setNegativeButton("取消",new android.content.DialogInterface.OnClickListener({onClick:function(){}}));
+        dialogchoose.create().show();
+       
+      }}));
+      radiogroup.addView(radio3);
+      
+      var text1=new android.widget.TextView(ctx);
+      text1.setText("图片路径"); 
+      layout.addView(text1);
+      var edit=new android.widget.EditText(ctx);
+      edit.setHint("在此输入图片路径，默认目录是/sdcard/image.jpg");
+      layout.addView(edit);
+      
+      
+      var text2=new android.widget.TextView(ctx);
+      text2.setText("显示模式");
+      layout.addView(text2);
+      layout.addView(radiogroup);
+      layout.setOrientation(1);
+      dialog.setView(layout);
+      dialog.setNegativeButton("保存设置",new android.content.DialogInterface.OnClickListener({onClick:function(){}}));
+      dialog.setPositiveButton("取消",new android.content.DialogInterface.OnClickListener({onClick:function(){}}));
+      dialog.create().show();
+      return true;
+    }catch(error){print(error);}}}));
+    win.setContentView(button);
+    win.setHeight(70);
+    win.setWidth(70);
+    win.showAtLocation(ctx.getWindow().getDecorView(),android.view.Gravity.RIGHT|android.view.Gravity.BOTTOM,0,0);
+  }catch(error){print(error);}}}));
+  return win;
+}
+/*
+        choosebutton1.setOnClickListener(new android.view.View.OnClickListener(){onClick:function(){
+          showmode = "ShowModeLeftUp";
+          }});
+        choosebutton2.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+          showmode="ShowModeLeftDown";
+          }}));
+        choosebutton3.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+          showmode="ShowModeRightUp";
+          }}));
+        choosebutton1.setOnClickListener(new android.view.View.OnClickListener({onClick:function(){
+          showmode="ShowModeRightDown";
+          }}));
+*/
+
+})();alert('$$$FINISHED$$$');
+</script> </body>

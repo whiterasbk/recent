@@ -1,0 +1,2189 @@
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+          注释
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+★注释一堆，不想看直接跳过
+★本函数表最初由 @aa517325894 制作
+后来由 @琉★之琉星祤 加以补充
+现由 @阿特我自己 继续修订
+修改发布权已经 @琉★之琉星祤 批准
+转载注明三位作者，不得擅自修改发布！
+
+★函数统计共289条:
+无前缀函数(28条)
+ModPE类函数(27条)
+Level类函数(48条)
+Player类函数(53条)
+Entity类函数(56条)
+Item类函数(21条)
+Block类函数(17条)
+Server类函数(6条)
+Renderer类函数(10条)
+Hook函数(23条)
+
+★未知函数3条(会在后续版本完善)
+  ☆MocPE类2条:
+    ModPE.dumpVtable(par1String, par2int);
+    ModPE.getI18n(par1String);
+  ☆Level类3条:
+    Level.getAddress();//该函数已失效
+
+★函数表版本:V1.8.0
+
+★本函数表所对应Blocklauncher版本:V1.12.8.beta4+
+
+★本函数表最后一次更新时间:
+2016.6.26  10:30
+
+★函数表中可能会有错误，若发现请反馈
+
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+      更新日志
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+
+★v1.1.0更新日志:
+  ☆适配新版启动器
+  ☆添加新函数:
+    ✨Item类2条:
+     Item.getUseAnimation(par1int);
+     Item.setUseAnimation(par1int, par2int);
+    ✨Block类1条:
+     Block.defineLiquidBlock(par1int, par2String, par3Object, par4Object);
+    ✨ID表:
+     UseAnimation.bow;
+     UseAnimation.normal;
+  ☆更改一些注释
+
+★v1.2.0更新日志:
+  ☆适配新版启动器
+  ☆添加新函数
+    ✨ModPE类2条:
+     ModPE.getModPE.getI18n(par1String);
+     ModPE.getLanguage();
+    ✨Player类3条:
+     Player.getEnchantments(par1int);
+     Player.getItemCustomName(par1int);
+     Player.setInventorySlot(par1int, par2int, par3int, par4int);
+     Player.setItemCustomName(par1int, par2String);
+    ✨Item类1条:
+     Item.setStackedByData(par1int, par2boolean);
+  ☆更改一些注释
+  
+★v1.2.1更新日志:
+  ☆为Player.enchant(par1int, par2int, par3int);添加准确的注释
+  ☆添加Enchantment的ID表
+  ☆修正一些注释
+  
+★v1.3.0更新日志:
+  ☆适配新版启动器
+  ☆添加新函数
+    ✨Item类1条:
+     Item.setEnchantType(par1int, par2int, par3int);
+  ☆添加EnchantType的ID表
+  ☆为Player.getEnchantments(par1int)函数添加完整注释以及示例
+  ☆为Item.setEnchantType(par1int, par2int, par3int);添加完整注释以及示例
+  ☆为Level.playSound(par1double, par2double, par3double, par4String, par5double, par6double);添加例子
+  ☆修正一些注释
+
+★v1.4.0更新日志：
+  ☆适配新版启动器
+  ☆添加完整的Renderer类函数(我从wiki搬来的，不完整咬我呀(ヽ´ω`))
+  ☆修正部分注释
+  
+★v1.5.0更新日志
+  ☆适配新版启动器
+  ☆添加新函数
+     ✨ModPE类函数1条:
+     ModPE.setUiRenderDebug(par1boolean);
+     ✨Level类函数4条:
+     Level.getDifficulty();
+     Level.getChestSlotCustomName(par1int, par2int, par3int, par4int);
+     Level.setDifficulty(par1int);
+     Level.setChestSlotCustomName(par1int, par2int, par3int, par4int, par5String);
+     ✨Entity类函数5条:
+     Entity.getExtraData(par1Object, par2String);
+     Entity.getTarget(par1Object);
+     Entity.setExtraData(par1Object, par2String, par3String);
+     Entity.setImmobile(par1Object, par2boolean);
+     Entity.setTarget(par1Object, par2Object);
+     ✨Hook函数1条:
+     function continueDestroyBlock(x, y, z, side, progress)     
+  ☆修改部分Renderer类函数的注释，并将英文原文改至中文下
+  ☆补充Player.getPointedVec系列三条函数的用法
+  ☆修正部分注释
+ 
+ ★v1.5.1更新日志
+  ☆为部分函数添加完整注释
+ 
+ ★v1.6.0更新日志
+  ☆适配新版启动器
+  ☆添加新函数
+     ✨Player类函数1条:
+     Player.getScore();
+     ✨Entity类函数1条:
+     Entity.getArmorCustomName(par1Object, par2int);
+     ✨Item类函数5条:
+     Item.getMaxDamage(par1int);
+     Item.getMaxStackSize(par1int);
+     Item.getTextureCoords(par1int, par2int);
+     Item.internalNameToId(par1String);
+     Item.translatedNameToId(par1String);
+     ✨Block类函数1条:
+     Block.getTextureCoords(par1int, par2int, par3int);
+     ✨Hook函数3条:
+     function entityHurtHook(attacker, victim, halfhearts)
+     function playerAddExpHook(player, experienceAdded)
+     function playerExpLevelChangeHook(player, levelsAdded)
+  ☆修正部分注释
+  
+ ★v1.7.0更新日志
+  ☆适配新版启动器
+  ☆添加新函数
+     ✨Item类函数2条:
+     Item.defineThrowable(par1int, par2String, par3int, par4String, par5int);
+     Item.getCustomThrowableRenderType(par1int);
+  ☆修正部分注释
+ 
+ ★v1.8.0更新日志
+  ☆优化注释，接近专业API文档
+    ✨将参数注释改成“参数X：XX类型”
+    ✨新增返回值注释，注释更完整
+
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+     无前缀函数(28条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+addItemInventory(par1int, par2int, par3int);
+在玩家背包中添加物品
+参数一：int类型 物品id
+参数二：int类型 数量
+参数三：int类型 特殊数据
+
+bl_setMobSkin(par1Object, par2String);
+设定实体皮肤
+参数一：Object类型 实体 
+参数二：String类型 图片路径 
+已停用！
+
+bl_spawnMob(par1double, par2double, par3double, par4int, par5String);
+在指定坐标生成指定id指定皮肤的实体
+参数一：double类型 X坐标
+参数二：double类型 Y坐标 
+参数三：double类型 Z坐标
+参数四：int类型 实体id(详见后面的实体id表)
+参数五：String类型 皮肤(在材质包的路径)
+返回值：Object类型 生成的实体
+已停用！
+
+clientMessage(par1String);
+在游戏对话栏里输出信息
+参数一：String类型 输出的信息
+
+explode(par1double, par2double, par3double, par4double, par5boolean);
+发生爆炸
+参数一：double类型 X坐标
+参数二：double类型 Y坐标
+参数三：double类型 Z坐标 
+参数四：double类型 爆炸的半径
+参数五：boolean类型 是否引起火灾
+
+getCarriedItem();
+获取玩家手持物品id
+返回值：int类型 物品id
+
+getLevel();
+获取玩家等级
+返回值：int类型 玩家等级
+
+getPitch(par1Object);
+获取实体的纵向视角
+参数一：Object类型 实体
+返回值：double类型 纵向视角
+
+getPlayerEnt();
+获取玩家实体
+返回值：Object类型 玩家实体
+
+getPlayerX();
+获取玩家的X坐标
+返回值：int类型 x坐标
+
+getPlayerY();
+获取玩家的Y坐标
+返回值：int类型 y坐标
+
+getPlayerZ();
+获取玩家的Z坐标
+返回值：int类型 z坐标
+
+getTile(par1int, par2int, par3int);
+获取指定坐标的方块id
+参数一：int类型 X坐标
+参数一：int类型 Y坐标
+参数一：int类型 Z坐标 
+返回值：int类型 方块id
+
+getYaw(par1Object);
+获取实体的横向视角
+参数一：Object类型 实体
+返回值：double类型 横向视角
+
+preventDefault();
+阻止默认操作
+
+print(par1String);
+在游戏中输出Toast，就是提示栏
+参数一：String类型 内容
+
+rideAnimal(par1Object, par2Object);
+让实体骑实体
+参数一：Object类型 实体
+参数二：Object类型 被骑的实体
+
+setNightMode(par1boolean);
+晚上模式
+参数一：boolean类型 true或false
+
+setPosition(par1Object, par2double, par3double, par4double);
+设定实体的坐标
+参数一：Object类型 实体
+参数二：double类型 X坐标
+参数三：double类型 Y坐标 
+参数四：double类型 Z坐标
+
+setPositionRelative(par1Object, par2double, par3double, par4double);
+设置指定实体对于自己的相对位置
+参数一：Object类型 实体
+参数二：double类型 X轴偏移
+参数三：double类型 Y轴偏移
+参数四：double类型 Z轴偏移
+
+setRot(par1Object, par2double, par3double);
+设定指定实体的视角
+参数一：Object类型 实体
+参数二：double类型 横向视角
+参数三：double类型 纵向视角 
+
+setTile(par1int, par2int, par3int, par4int, par5int);
+设定指定坐标的方块
+参数一：int类型 X坐标
+参数二：int类型 Y坐标
+参数三：int类型 Z坐标
+参数四：int类型 方块id
+参数五：int类型 方块特殊值
+
+setVelX(par1Object, par2double);
+设定实体的X轴速度
+参数一：Object类型 实体
+参数二：double类型 速度
+
+setVelY(par1Object, par2double);
+设定实体的X轴速度
+参数一：Object类型 实体
+参数二：double类型 速度
+
+setVelZ(par1Object, par2double);
+设定实体的X轴速度
+参数一：Object类型 实体
+参数二：double类型 速度
+
+spawnChicken(par1double, par2double, par3double, par4String);
+在指定坐标生成指定皮肤的鸡
+参数一：double类型 X坐标
+参数二：double类型 Y坐标
+参数三：double类型 Z坐标
+参数四：String类型 皮肤(在材质包的路径)
+返回值：Object类型 生成的实体
+
+spawnCow(par1double, par2double, par3double, par4String);
+在指定坐标生成指定皮肤的牛
+参数一：double类型 X坐标
+参数二：double类型 Y坐标
+参数三：double类型 Z坐标
+参数四：String类型 皮肤(在材质包的路径)
+返回值：Object类型 生成的实体
+
+spawnPigZombie(par1double, par2double, par3double, par4int, par5String);
+在指定坐标生成指定皮肤手持指定物品的僵尸猪人
+参数一：double类型 X坐标
+参数二：double类型 Y坐标
+参数三：double类型 Z坐标
+参数四：int类型 手持物品的id
+参数五：String类型 皮肤(在材质包的路径)
+返回值：Object类型 生成的实体
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+    ModPE类函数(27条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+ModPE.dumpVtable(par1String, par2int);
+未知
+参数一：String类型 未知
+参数二：int类型 未知
+
+ModPE.getBytesFromTexturePack(par1String);
+获取材质包字节
+参数一：String类型 路径
+返回值：类型待确定 材质包字节
+
+ModPE.getI18n(par1String);
+未知
+参数一：String类型 未知
+
+ModPE.getLanguage();
+获取Minecraftpe正在使用的语言
+返回值：String类型 语言
+
+ModPE.getMinecraftVersion();
+获取Minecraftpe版本号
+返回值：String类型 版本号
+
+ModPE.langEdit(par1String, par2String);
+修改文字引用
+参数一：String类型 前缀
+参数二：String类型 字符串
+
+ModPE.leaveGame();
+退出存档
+
+ModPE.log(par1String);
+打印指定消息日志
+参数一：String类型 内容
+
+ModPE.openInputStreamFromTexturePack(par1String);
+从材质包返回输入流
+参数一：String类型 路径
+返回值：类型待确定 输入流
+
+ModPE.overrideTexture(par1String, par2String);
+修改材质文件
+参数一：String类型 在材质包内需要替换的图片的路径
+参数二：String类型 替换成的图片
+
+ModPE.readData(par1String);
+读取启动器储存的数据
+参数一：String类型 数据的名字
+返回值：类型待确定 数据
+
+ModPE.removeData(par1String);
+清除启动器储存的数据
+参数一：String类型 数据的名字
+
+ModPE.resetFov();
+重设视角放大度数
+
+ModPE.resetImages();
+重置材质包
+
+ModPE.saveData(par1String, par2String);
+储存数据
+参数一：String类型 数据的名字  
+参数二：String类型 储存的变量
+
+ModPE.selectLevel(par1String);
+跳转存档
+参数一：String类型 存档的根目录
+
+ModPE.setCamera(par1Object);
+设置照相机机
+参数一：Object类型 目标实体
+可利用此函数做出一些奇奇怪怪的东西
+
+ModPE.setFoodItem(par1int, par2String, par3int, par4int, par5String, par6int);
+设定指定物品为食品(可以做到添加物品)
+参数一：int类型 ID
+参数二：String类型 材质在item.meta引用的名字
+参数三：int类型 材质的排列值
+参数四：int类型 补充的饥饿值
+参数五：String类型 物品的名字
+参数六：int类型 最大堆叠数量
+
+ModPE.setFov(par1double);
+设定视角放大的度数
+参数一：double类型 放大的度数
+
+ModPE.setGameSpeed(par1double);
+设定当前游戏最高速度
+参数一：double类型 速度(默认为20)
+
+ModPE.setGuiBlocks(par1String);
+设定方块GUI
+参数一：String类型 图片(的路径)
+
+ModPE.setItem(par1int, par2String, par3int, par4String, par5int);
+设定指定物品(可以做到添加物品)
+参数一：int类型 ID
+参数二：String类型 材质名称
+参数三：int类型 材质的排列值(一般填0)
+参数四：String类型 物品的名字
+参数五：int类型 最大堆叠数量 
+
+ModPE.setItems(par1String);
+设定Items.png(就是手上的物品图标)为par1String
+参数一：String类型 图片(的路径)
+
+ModPE.setTerrain(par1String);
+设定Terrain.meta(方块材质值引用)的路径
+参数一：String类型 路径
+
+ModPE.setUiRenderDebug(par1boolean);
+设置游戏主界面渲染调试信息(自己尝试一下就明白了，估计是卓伟为了便利使用json编辑GUI)
+参数一：boolean类型 
+
+ModPE.showTipMessage(par1String);
+在屏幕下方显示文字
+参数一：String类型 显示的文字
+
+ModPE.takeScreenshot(par1String);
+在MCPE里截图(因为是内置截图，不能拍到GUI等东西)
+参数一：String类型 保存路径
+
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+    Level类函数(48条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+Level.addParticle(par1int, par2double, par3double, par4double, par5double, par6double, par7double, par8int);
+在指定坐标生成粒子效果
+参数一：int类型 例子类型
+参数二：double类型 X坐标
+参数三：double类型 Y坐标 
+参数四：double类型 Z坐标
+参数五：double类型 X速度
+参数六：double类型 Y速度
+参数七：double类型 Z速度 
+参数八：int类型 大小
+
+Level.biomeIdToName(par1int);
+获取生态系统id对应的名字
+参数一：int类型 生态系统id
+返回值：String类型 生态系统名字
+
+Level.canSeeSky(par1int, par2int, par3int);
+判断某个坐标是否可以看到天空，即在某个坐标上方是否有不透明方块
+参数一：int类型 x坐标
+参数二：int类型 y坐标
+参数三：int类型 z坐标
+返回值：boolean值 true为是，false为否
+
+Level.destroyBlock(par1int, par2int, par3int, par4boolean);
+破坏指定位置的方块
+参数一：int类型 X坐标
+参数二：int类型 Y坐标
+参数三：int类型 Z坐标
+参数四：boolean类型 是否掉落物品
+
+Level.dropItem(par1double, par2double, par3double, par4double, par5int, par6int, par7int);
+在指定位置掉落物品
+参数一：double类型 X坐标
+参数二：double类型 Y坐标
+参数三：double类型 Z坐标
+参数四：double类型 掉落物品的范围(偏移Y坐标) 
+参数五：int类型 掉落物品的id
+参数六：int类型 掉落物品的数量
+参数七：int类型 掉落物品的特殊数据
+
+Level.explode(par1double, par2double, par3double, par4double, par5boolean);
+在指定坐标发生指定半径的爆炸
+具体用法跟杂项函数里的explode()一样
+
+Level.getAddress();
+未知
+(获取地址?)
+返回值：类型待确定 
+
+Level.getBiome(par1int, par2int);
+获取生态系统的id
+参数一：int类型 X坐标
+参数二：int类型 Z坐标
+
+Level.getBiomeName(par1int, par2int);
+获取生态系统的名字
+参数一：int类型 X坐标
+参数二：int类型 Z坐标
+
+Level.getBrightness(par1int, par2int, par3int);
+获取指定坐标亮度
+参数一：int类型 X坐标
+参数二：int类型 Y坐标 
+参数三：int类型 Z坐标 
+返回值：int类型 指定坐标的亮度
+
+Level.getChestSlot(par1int, par2int, par3int, par4int);
+获取箱子里物品的id
+参数一：int类型 箱子的X坐标
+参数二：int类型 箱子的Y坐标 
+参数三：int类型 箱子的Z坐标 
+参数四：int类型 箱子里的格子的位置(横着数) 
+返回值：int类型 物品的id
+
+Level.getChestSlotCount(par1int, par2int, par3int, par4int);
+获取箱子里物品的数量
+参数一：int类型 箱子的X坐标
+参数二：int类型 箱子的Y坐标 
+参数三：int类型 箱子的Z坐标 
+参数四：int类型 箱子里的格子的位置(横着数) 
+返回值：int类型 物品的数量
+
+Level.getChestSlotCustomName(par1int, par2int, par3int, par4int);
+设置箱子格子的自定义名称
+参数一：int类型 箱子的X坐标
+参数二：int类型 箱子的Y坐标 
+参数三：int类型 箱子的Z坐标 
+参数四：int类型 位置
+返回值：String类型 名字
+
+Level.getChestSlotData(par1int, par2int, par3int, par4int);
+获取箱子里物品的特殊值
+参数一：int类型 箱子的X坐标
+参数二：int类型 箱子的Y坐标 
+参数三：int类型 箱子的Z坐标 
+参数四：int类型 箱子里的格子的位置(横着数) 
+返回值：int类型 特殊值
+
+Level.getData(par1int, par2int, par3int);
+获取指定坐标方块的特殊值
+参数一：int类型 X坐标
+参数二：int类型 Y坐标 
+参数三：int类型 Z坐标 
+返回值：int类型 特殊值
+
+Level.getDifficulty();
+获取当前游戏难度
+返回值：int类型 游戏难度
+0为和平
+1为简单
+2为普通
+3为困难
+
+Level.getFurnaceSlot(par1int, par2int, par3int, par4int);
+获取熔炉里物品的id
+参数一：int类型 熔炉的X坐标
+参数二：int类型 熔炉的Y坐标 
+参数三：int类型 熔炉的Z坐标 
+参数四：int类型 熔炉里的格子的位置 
+返回值：int类型 物品的id
+
+Level.getFurnaceSlotCount(par1int, par2int, par3int, par4int);
+获取熔炉里物品的数量
+参数一：int类型 熔炉的X坐标
+参数二：int类型 熔炉的Y坐标 
+参数三：int类型 熔炉的Z坐标 
+参数四：int类型 熔炉里的格子的位置 
+返回值：int类型 物品的数量
+
+Level.getFurnaceSlotData(par1int, par2int, par3int, par4int);
+获取熔炉里物品的特殊值
+参数一：int类型 熔炉的X坐标
+参数二：int类型 熔炉的Y坐标 
+参数三：int类型 熔炉的Z坐标 
+参数四：int类型 熔炉里的格子的位置 
+返回值：int类型 物品的特殊值
+
+Level.getGameMode();
+获取游戏模式
+返回值：int类型 游戏模式
+0为生存
+1为创造
+
+Level.getGrassColor(par1int, par2int);
+获取草的颜色
+参数一：X坐标
+参数二：Z坐标
+返回值：类型待测试 草的颜色
+
+Level.getLightningLevel();
+获取当前存档是否为闪电天气
+返回值：boolean类型 true为是，false为否
+
+Level.getRainLevel();
+获取当前存档是否为下雨天气
+返回值：boolean类型 true为是，false为否
+
+Level.getSignText(par1int, par2int, par3int, par4int);
+获取告示牌的内容
+参数一：int类型 牌子的X坐标
+参数二：int类型 牌子的Y坐标 
+参数三：int类型 牌子的Z坐标 
+参数四：int类型 牌子行数 (从0开始)
+返回值：String类型 告示牌的内容
+
+Level.getSpawnerEntityType(par1int, par2int, par3int);
+获取刷怪笼刷出的实体id
+参数一：int类型 x坐标
+参数二：int类型 y坐标
+参数三：int类型 z坐标
+返回值：int类型 实体id
+
+Level.getTile(par1int, par2int, par3int);
+获取指定坐标的方块id
+参数一：int类型 X轴坐标
+参数二：int类型 Y轴坐标
+参数三：int类型 Z轴坐标
+返回值：int类型 方块id
+
+Level.getTime();
+获取当前存档时间
+返回值：int类型 时间
+
+Level.getWorldDir();
+获取存档根目录的名字
+返回值：String类型 名字
+
+Level.getWorldName();
+获取存档的名字
+返回值：String类型 名字
+
+Level.playSound(par1double, par2double, par3double, par4String, par5double, par6double);
+在指定坐标发出声音
+参数一：double类型 X坐标
+参数二：double类型 Y坐标 
+参数三：double类型 Z坐标 
+参数四：String类型 声音的名字
+参数五：double类型 声音的大小
+参数六：double类型 音调
+
+例子:
+function useItem(x,y,z,itemId,blockId,side)
+{
+ if(blockId==1)
+ {
+  //如果方块是石头
+  Level.playSound(getPlayerX(),getPlayerY(),getPlayerZ(),"random.explode",30,25); 
+ //发出爆炸声
+  }
+ }
+ 
+Level.playSoundEnt(par1Object, par2String, par3double, par4double);
+指定的实体发出声音
+参数一：Object类型 发出声音的实体
+参数二：String类型 声音的名字
+参数三：double类型 声音的大小
+参数四：double类型 音调
+
+Level.setChestSlot(par1int, par2int, par3int, par4int, par5int, par6int, par7int);
+设定箱子的物品
+参数一：int类型 箱子的X坐标
+参数二：int类型 箱子的Y坐标 
+参数三：int类型 箱子的Z坐标 
+参数四：int类型 格子
+参数五：int类型 物品id
+参数六：int类型 物品特殊数据
+参数七：int类型 物品数量
+
+Level.setChestSlotCustomName(par1int, par2int, par3int, par4int, par5String);
+设置箱子格子的自定义名称
+参数一：int类型 箱子的X坐标
+参数二：int类型 箱子的Y坐标 
+参数三：int类型 箱子的Z坐标 
+参数四：int类型 格子
+参数五：String类型 名称
+
+Level.setDifficulty(par1int);
+设置当前游戏难度
+参数一：int类型 难度
+0和平
+1简单
+2普通
+3困难
+
+Level.setFurnaceSlot(par1int, par2int, par3int, par4int, par5int, par6int, par7int);
+设定熔炉的物品
+参数一：int类型 熔炉的X坐标
+参数二：int类型 熔炉的Y坐标 
+参数三：int类型 熔炉的Z坐标 
+参数四：int类型 格子
+参数五：int类型 id
+参数六：int类型 特殊数据
+参数七：int类型 数量 
+
+Level.setGameMode(par1int);
+设定游戏模式
+参数一：int类型 模式id
+0为生存
+1为创造
+
+Level.setGrassColor(par1int, par2int, par3int);
+设置草的颜色
+参数一：int类型 X坐标
+参数二：int类型 Z坐标
+参数三：int类型 16进制颜色代码
+例子:0x30ff00
+ps:用编辑器调出的颜色代码是#81FF00这样的，把#换成0x即可。
+
+Level.setLightningLevel(par1double);
+设置闪电等级
+参数一：double类型 等级
+
+Level.setNightMode(par1boolean);
+设定晚上模式
+参数一：boolean类型 
+
+Level.setRainLevel(par1double);
+设置下雨等级
+参数一：double类型 等级
+
+Level.setSignText(par1int, par2int, par3int, par4int, par5String);
+设定告示牌的内容
+参数一：int类型 牌子的X坐标
+参数二：int类型 牌子的Y坐标 
+参数三：int类型 牌子的Z坐标 
+参数四：int类型 牌子行数
+参数五：String类型 内容
+
+Level.setSpawn(par1int, par2int, par3int);
+设定玩家重生点
+参数一：int类型 X坐标
+参数二：int类型 Y坐标 
+参数三：int类型 Z坐标 
+
+Level.setSpawnerEntityType(par1int, par2int, par3int, par4int);
+设置刷怪笼的实体id类型
+par1int X轴坐标
+par2int Y轴坐标
+par3int Z轴坐标
+par4int 实体id(0为不生怪)
+
+Level.setTile(par1int, par2int, par3int, par4int, par5int);
+设定指定坐标的方块
+参数一：int类型 X坐标
+参数二：int类型 Y坐标
+参数三：int类型 Z坐标
+参数四：int类型 方块id
+参数五：int类型 方块特殊值
+
+Level.setTime(par1int);
+设置当前存档的时间
+参数一：int类型 时间
+
+Level.spawnChicken(par1double, par2double, par3double, par4String);
+在指定坐标生成指定皮肤的鸡
+具体用法跟杂项类的spawnChicken()相同 
+返回值：Object类型 生成的实体
+
+Level.spawnCow(par1double, par2double, par3double, par4String);
+在指定坐标生成指定皮肤的牛
+具体用法跟杂项类的spawnCow()相同 
+返回值：Object类型 生成的实体
+
+Level.spawnMob(par1double, par2double, par3double, par4int, par5String);
+在指定坐标生成指定id指定皮肤的实体
+参数一：double类型 X坐标
+参数二：double类型 Y坐标 
+参数三：double类型 Z坐标
+参数四：int类型 实体id(详见后面的实体id表)
+参数五：String类型 皮肤路径 可空(填空为默认皮肤)
+返回值：Object类型 生成的实体
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+    Player类函数(53条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+Player.addExp(par1int);
+增加玩家的经验值
+参数一：int类型 经验值
+
+Player.addItemCreativeInv(par1int, par2int, par3int);
+添加物品至创造背包
+参数一：int类型 id
+参数二：int类型 数量
+参数三：int类型 特殊值
+启动器会自动分类
+
+Player.addItemInventory(par1int, par2int, par3int);
+添加物品至生存背包
+参数一：int类型 id
+参数二：int类型 数量
+参数三：int类型 特殊值
+
+Player.canFly();
+判断玩家是否可以飞行
+返回值：boolean类型 true为是，false为否
+
+Player.clearInventorySlot(par1int);
+清除(玩家)背包的物品
+参数一：int类型 背包格数
+
+Player.enchant(par1int, par2int, par3int);
+为工具添加一个效果
+参数一：int类型 物品id
+参数二：int类型 效果id
+参数三：int类型 效果等级
+Tries to add an enchantment to the item held in slot. Returns true if the enchantment is added; false if the enchantment is incompatible with the item in the slot.
+例:
+if(Player.enchant(Player.getSelectedSlot(), Enchantment.EFFICIENCY, 1))
+{
+ clientMessage("目前持有物品添加效率1 ");
+ }
+else
+{
+ clientMessage("无法添加效率1 你只能使用效率铲子");
+ }
+ 
+效果列表:
+Enchantment.PROTECTION
+Enchantment.FIRE_PROTECTION
+Enchantment.FEATHER_FALLING
+Enchantment.BLAST_PROTECTION
+Enchantment.PROJECTILE_PROTECTION
+Enchantment.THORNS
+Enchantment.RESPIRATION
+Enchantment.AQUA_AFFINITY
+Enchantment.DEPTH_STRIDER
+Enchantment.SHARPNESS
+Enchantment.SMITE
+Enchantment.BANE_OF_ARTHROPODS
+Enchantment.KNOCKBACK
+Enchantment.FIRE_ASPECT
+Enchantment.LOOTING
+Enchantment.EFFICIENCY
+Enchantment.SILK_TOUCH
+Enchantment.UNBREAKING
+Enchantment.FORTUNE
+Enchantment.POWER
+Enchantment.PUNCH
+Enchantment.FLAME
+Enchantment.INFINITY
+Enchantment.LUCK_OF_THE_SEA
+Enchantment.LURE
+
+Player.getArmorSlot(par1int);
+获取(玩家)盔甲的id
+参数一：int类型 盔甲格数
+返回值：盔甲的id
+
+Player.getArmorSlotDamage(par1int);
+获取(玩家)盔甲的耐久度
+参数一：int类型 盔甲格数
+返回值：int类型 盔甲的耐久度
+
+Player.getCarriedItem();
+获取(玩家)手持物品id
+返回值：int类型类型 物品id
+
+Player.getCarriedItemCount();
+获取(玩家)手持物品数量
+返回值：int类型 物品数量
+
+Player.getCarriedItemData();
+获取(玩家)手持物品特殊值
+返回值：int类型 物品特殊值
+
+Player.getDimension();
+获取玩家所在的纬度
+返回值：int类型 纬度
+0为主世界，1为地狱
+
+Player.getEnchantments(par1int);
+获取背包物品附魔效果
+返回值：int类型数组 背包物品附魔效果(如果插槽没有项目则返回或null)
+数组的每个项目包含两个属性：类型(附魔效果ID*常数)和等级(附魔效果等级)
+
+Returns an array of the enchantments on the item in the slot, or null if there is no item in that slot.
+Each item contains two attributes: type (equal to one of the Enchantment.* constants) and level (the level of the enchantment)
+例子:
+var enchants = Player.getEnchantments(Player.getSelectedSlotId());
+if (enchants == null) {
+    clientMessage("Hey, you're not holding anything!");
+} else {
+    for (var i = 0; i < enchants.length; i++) {
+        if (enchants[i].type == Enchantment.FIRE_ASPECT && enchants[i].level == 1) {
+            clientMessage("You're holding something with fire aspect level 1");
+        }
+    }
+}
+
+Player.getEntity();
+获取玩家实体
+返回值：Object.类型 玩家实体
+
+Player.getExhaustion();
+获取玩家疲劳值
+返回值：int类型 疲劳值
+在饱和度为0时，疲劳值会不断增加，每满4清0，并掉落一点饥饿值。(如有不准确的地方请联系我)
+
+Player.getExp();
+获取玩家经验值
+返回值：int类型 经验
+
+Player.getHunger();
+获取玩家饥饿值
+返回值：int类型 饥饿值
+
+Player.getInventorySlot(par1int);
+获取(玩家)背包的物品id
+参数一：int类型 背包格数
+返回值：物品id
+
+Player.getInventorySlotCount(par1int);
+获取(玩家)背包的物品数量
+参数一：int类型 背包格数
+返回值：int类型 物品数量
+
+Player.getInventorySlotData(par1int);
+获取(玩家)背包的物品特殊值
+参数一：int类型 背包格数
+返回值：int类型 物品特殊值
+
+Player.getItemCustomName(par1int);
+获取物品定自定义名称
+返回值：String类型 名称
+参数一：int类型 物品id
+例:clientMessage(Player.getItemCustomName(Player.getSelectedSlotId());
+
+Player.getLevel();
+获取玩家等级
+返回值：int类型 等级
+
+Player.getName(par1Object);
+获取玩家名称
+参数一：Object类型 实体
+返回值：String类型 名称
+如果par1Object不是玩家则会返回"not a player"
+
+Player.getPointedBlockData();
+获取玩家十字指针所指的方块的特殊值
+返回值：int类型 方块的特殊值
+
+Player.getPointedBlockId();
+获取玩家十字指针所指的方块的id
+返回值：int类型 方块的id
+
+Player.getPointedBlockSide();
+获取玩家十字指针所指的方块的面
+返回值：int类型 方块的面
+
+Player.getPointedBlockX();
+获取玩家十字指针所指的方块X坐标
+返回值：int类型 x坐标
+
+Player.getPointedBlockY();
+获取玩家十字指针所指的方块Y坐标
+返回值：int类型 y坐标
+
+Player.getPointedBlockZ();
+获取玩家十字指针所指的方块Z坐标
+返回值：int类型 z坐标
+
+Player.getPointedEntity();
+获取玩家十字指针所指的实体
+返回值：Object类型 实体
+
+Player.getPointedVecX();
+获取玩家十字指针所指的方块精准X坐标
+返回值：int类型 x坐标
+
+Player.getPointedVecY();
+获取玩家十字指针所指的方块精准Y坐标
+返回值：int类型 y坐标
+
+Player.getPointedVecZ();
+获取玩家十字指针所指的方块精准Z坐标
+返回值：int类型 z坐标
+(此三条函数与getPointedBlock有所区别，前者返回整数，后者返回精确小数)
+
+Player.getSaturation();
+获取玩家饱和度
+返回值：int类型 饱和度
+饱和度满为20，会不断下降，在此过程中玩家不会掉饥饿值，下降为0就会检测玩家疲劳值，疲劳值会不断增加，每满4清0，并掉落一点饥饿值。吃东西会增加饱和度，死亡重生后饱和度为5。(如有不准确的地方请联系我)
+
+Player.getScore();
+获取玩家得分(可能是击杀数)
+返回值：int类型 得分
+
+Player.getSelectedSlotId();
+获取玩家正在使用的物品栏格数
+返回值：int类型 物品栏格数
+
+Player.getX();
+获取玩家X坐标
+返回值：int类型 x坐标
+
+Player.getY();
+获取玩家Y坐标
+返回值：int类型 y坐标
+
+Player.getZ();
+获取玩家Z坐标
+返回值：int类型 z坐标
+
+Player.isFlying();
+判断玩家是否在飞行
+返回值：boolean类型 true为是，false为否
+
+Player.isPlayer(par1Object);
+判断实体是否为玩家
+参数一：Object类型 实体
+返回值：boolean类型 true为是，false为否
+
+Player.setArmorSlot(par1int, par2int, par3int);
+设定盔甲id，特殊数据
+参数一：int类型 盔甲格
+参数二：int类型 id
+参数三：int类型 特殊数据
+
+Player.setCanFly(par1boolean);
+设置玩家能否飞行
+参数一：boolean类型 true为是，false为否
+
+Player.setExhaustion(par1double);
+设置玩家疲惫值
+参数一：double类型 疲惫值
+
+Player.setExp(par1double);
+设置玩家经验值
+参数一：double类型 经验值
+
+Player.setFlying(par1boolean);
+切换玩家飞行状态
+参数一：boolean类型 true为正在飞行
+
+Player.setHealth(par1int);
+设定玩家的血量
+参数一：int类型 血量值
+
+Player.setHunger(par1double);
+设定玩家的饥饿值
+参数一：double类型 饥饿值
+
+Player.setInventorySlot(par1int, par2int, par3int, par4int);
+设定玩家背包的物品
+参数一：int类型 背包格数
+参数二：int类型 物品id
+参数三：int类型 物品数量
+参数四：int类型 物品特殊值
+
+Player.setItemCustomName(par1int, par2String);
+设定物品定制名称
+参数一：int类型 物品ID
+参数二：String类型 名称
+
+Player.setLevel(par1int);
+设置玩家等级
+参数一：int类型 等级
+
+Player.setSaturation(par1double);
+设定玩家的饱和度
+参数一：double类型 饱和度
+可达到不掉饥饿值的效果
+
+Player.setSelectedSlotId(par1int);
+设定玩家正在使用的物品在背包的格数
+参数一：int类型 背包格数
+
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+    Entity类函数(56条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+Entity.addEffect(par1Object, par2int, par3int, par4int, par5boolean, par6boolean);
+给实体添加药水效果
+参数一：Object类型 实体
+参数二：int类型 药水效果id 
+参数三：int类型 药水效果持续时间(单位:tick)
+参数四：int类型 药水效果等级
+参数五：boolean类型 有无阴影效果
+参数六：boolean类型 是否在实体周围产生药水粒子
+PS:药水效果只能给有生命的实体。
+
+Entity.getAll();
+获取所有实体
+返回值：Object类型数组 包含所有实体
+
+Entity.getAnimalAge(par1Object);
+获取实体的年龄
+参数一：Object类型 实体
+返回值：int类型 实体的年龄
+具体数据待测试
+
+Entity.getArmor(par1Object, par2int);
+获取实体盔甲id
+参数一：Object类型 实体
+参数二：int类型 盔甲格数
+返回值：int类型 盔甲id
+
+Entity.getArmorCustomName(par1Object, par2int);
+获取实体盔甲自定义名称
+参数一：Object类型 实体
+参数二：int类型 盔甲格数
+返回值：String类型 名称
+
+Entity.getArmorDamage(par1Object, par2int);
+获取实体盔甲耐久值
+参数一：Object类型 实体
+参数二：int类型 盔甲格数
+返回值：int类型 耐久值
+
+Entity.getEntityTypeId(par1Object);
+获取实体的实体id
+参数一：Object类型 实体
+返回值：int类型 实体id
+
+Entity.getExtraData(par1Object, par2String);
+获取实体额外数据
+参数一：Object类型 实体
+参数二：String类型 数据名称
+返回值：类型待确定 额外数据
+
+Entity.getHealth(par1Object);
+获取实体的血量
+参数一：Object类型 实体
+返回值：int类型 血量
+
+Entity.getItemEntityCount(par1Object);
+获取掉落物的数量
+参数一：Object类型 掉落物实体
+返回值：int类型 数量
+
+Entity.getItemEntityData(par1Object);
+获取掉落物的特殊值
+参数一：Object类型 掉落物实体
+返回值：int类型 特殊值
+
+Entity.getItemEntityId(par1Object);
+获取掉落物的ID
+参数一：Object类型 掉落物实体
+返回值：int类型 ID
+
+Entity.getMaxHealth(par1Object);
+获取实体最大血量
+参数一：Object类型 实体
+返回值：int类型 血量
+
+Entity.getMobSkin(par1Object);
+获取实体的皮肤路径
+参数一：Object类型 实体
+返回值：String类型 皮肤路径
+
+Entity.getNameTag(par1Object);
+获取实体的铭牌里的字
+参数一：Object类型 实体
+返回值：String类型 实体的铭牌里的字 
+
+Entity.getPitch(par1Object);
+获取实体的纵向视角
+参数一：Object类型 实体
+返回值：double类型 实体的纵向视角
+
+Entity.getRenderType(par1Object);
+获取实体的模型(类别)id
+参数一：Object类型 实体
+返回值：int类型 实体的模型(类别)id
+
+Entity.getRider(par1Object);
+获取骑着实体的实体
+参数一：Object类型 实体
+返回值：Object类型 骑着实体的实体
+
+Entity.getRiding(par1Object);
+获取实体骑着的实体
+参数一：Object类型 实体 
+返回值：Object类型 实体骑着的实体 
+
+Entity.getTarget(par1Object);
+获取实体的攻击目标
+参数一：Object类型 实体
+返回值：类型 攻击目标实体
+
+Entity.getUniqueId(par1Object);
+获取实体的UniqueId
+参数一：Object类型 实体
+返回值：类型待确定 UniqueId
+UniqueId相当于实体的系列码
+储存在Entity.dat里
+永远不会变
+
+Entity.getVelX(par1Object);
+获取实体X轴的速度
+参数一：Object类型 实体
+返回值：double类型 实体的X轴的速度 
+该函数的精确数据未知 
+
+Entity.getVelY(par1Object);
+获取实体Y轴的速度
+参数一：Object类型 实体
+返回值：double类型 实体的Y轴的速度 
+该函数的精确数据未知 
+
+Entity.getVelZ(par1Object);
+获取实体Z轴的速度
+参数一：Object类型 实体
+返回值：double类型 实体的Z轴速度 
+该函数的精确数据未知 
+
+Entity.getX(par1Object);
+获取实体X坐标
+参数一：Object类型 实体
+返回值：int类型 实体的X坐标
+
+Entity.getY(par1Object);
+获取实体Y坐标
+参数一：Object类型 实体
+返回值：int类型 实体的Y坐标
+
+Entity.getYaw(par1Object);
+获取实体纵向视角
+参数一：Object类型 实体
+返回值：double类型 纵向视角
+
+Entity.getZ(par1Object);
+获取实体Z坐标
+参数一：Object类型 实体
+返回值：int类型 实体的Z坐标
+
+Entity.isSneaking(par1Object);
+获取实体是否潜行
+参数一：Object类型 实体
+返回值：boolean类型 true为是，false为否
+
+Entity.remove(par1Object);
+移除实体
+参数一：Object类型 实体
+
+Entity.removeAllEffects(par1Object);
+移除实体所有药水效果
+参数一：Object类型 实体
+
+Entity.removeEffect(par1Object, par2int);
+移除实体指定药水效果
+参数一：Object类型 实体
+参数二：int类型 药水效果id
+
+Entity.rideAnimal(par1Object, par2Object);
+实体骑上实体
+具体用法跟杂项函数的rideAnimal()一样
+
+Entity.setAnimalAge(par1Object, par2int);
+设定实体年龄
+参数一：Object类型 实体
+参数二：int类型 年龄
+
+Entity.setArmor(par1Object, par2int, par3int, par4int);
+设置实体的盔甲
+参数一：Object类型 实体
+参数二：int类型 盔甲格数
+参数三：int类型 盔甲id
+参数四：int类型 盔甲耐久值
+
+Entity.setCape(par1Object, par2String);
+设置实体披风
+参数一：Object类型 实体
+参数二：String类型 皮肤路径
+
+Entity.setCarriedItem(par1Object, par2int, par3int, par4int);
+设定实体手持的物品
+参数一：Object类型 实体
+参数二：int类型 物品id
+参数三：int类型 数量
+参数四：int类型 特殊数据
+
+Entity.setCollisionSize(par1Object, par2double, par3double);
+设置实体碰撞箱大小
+参数一：Object类型 实体
+参数二：double类型 直径
+参数三：double类型 高度
+(单位:方块)
+
+Entity.setExtraData(par1Object, par2String, par3String);
+设置实体额外数据
+参数一：Object类型 实体
+参数二：String类型 数据名称
+参数三：String类型 数据
+
+Entity.setFireTicks(par1Object, par2int);
+设定实体着火时间
+参数一：Object类型 实体
+参数二：int类型 着火时间
+(设定为0无法消除着火)
+
+Entity.setHealth(par1Object, par2int);
+设定实体血量
+参数一：Object类型 实体
+参数二：int类型 设定的血量
+(设定为0或0以下会死，但不会掉落任何物品)
+
+Entity.setImmobile(par1Object, par2boolean);
+固定实体
+参数一：Object类型 实体
+参数二：boolean类型 
+
+Entity.setMaxHealth(par1Object, par2int);
+设定实体血量上限
+参数一：Object类型 实体
+参数二：int类型 血量
+
+Entity.setMobSkin(par1Object, par2String);
+设定实体皮肤
+参数一：Object类型 实体
+参数二：String类型 图片(在材质包的路径)
+
+Entity.setNameTag(par1Object, par2String);
+设定实体头上的铭牌
+参数一：Object类型 实体
+参数二：String类型 名字
+
+Entity.setPosition(par1Object, par2double, par3double, par4double);
+设定实体的坐标
+参数一：Object类型 实体
+参数二：double类型 X坐标
+参数三：double类型 Y坐标 
+参数四：double类型 Z坐标
+
+Entity.setPositionRelative(par1Object, par2double, par3double, par4double);
+设置指定实体对于自己的相对位置
+参数一：Object类型 实体
+参数二：double类型 X轴偏移
+参数三：double类型 Y轴偏移
+参数四：double类型 Z轴偏移
+(由于没有测试，参数可能会弄错，请谅解)
+
+Entity.setRenderType(par1Object, par2int);
+设定实体的模型
+参数一：Object类型 实体
+参数二：int类型 模型id
+
+Entity.setRot(par1Object, par2double, par3double);
+设定指定实体的视角
+参数一：Object类型 实体
+参数二：double类型 X视角
+参数三：double类型 Y视角 
+
+Entity.setSneaking(par1Object, par2boolean);
+设定指定实体潜行
+参数一：Object类型 实体
+参数二：boolean类型 ，true或false
+
+Entity.setTarget(par1Object, par2Object);
+设定实体把...作为攻击目标
+参数一：Object类型 实体
+参数二：Object类型 攻击目标实体
+
+Entity.setVelX(par1Object, par2double);
+设定实体X轴速度
+参数一：Object类型 实体
+参数二：double类型 速度
+
+Entity.setVelY(par1Object, par2double);
+设定实体Y轴速度
+参数一：Object类型 实体
+参数二：double类型 速度
+
+Entity.setVelZ(par1Object, par2double);
+设定实体Z轴速度
+参数一：Object类型 实体
+参数二：double类型 速度
+
+Entity.spawnMob(par1double, par2double, par3double, par4int, par5String);
+在指定坐标生成指定id指定皮肤的实体
+参数一：double类型 X坐标
+参数二：double类型 Y坐标 
+参数三：double类型 Z坐标
+参数四：int类型 实体id(详见后面的实体id表)
+参数五：String类型 皮肤路径
+
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+     Item类函数(21条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+Item.addCraftRecipe(par1int, par2int, par3int, par4Scriptable);
+添加背包合成配方
+参数一：int类型 合成输出的物品id
+参数二：int类型 合成输出的物品数量
+参数三：int类型 合成输出的物品特殊值
+参数四：Scriptable类型 合成公式
+[id,数量,data,id,数量,data……]
+以此类推 
+
+Item.addFurnaceRecipe(par1int, par2int, par3int);
+添加熔炉配方
+参数一：int类型 烧的物品id
+参数二：int类型 烧出来的物品id
+参数三：int类型 烧出来的物品data
+
+Item.addShapedRecipe(par1int, par2int, par3int, par4Scriptable, par5Scriptable);
+添加工作台合成配方
+参数一：int类型 合成输出的物品id
+参数二：int类型 合成输出的物品数量
+参数三：int类型 合成输出的物品data
+参数四：Scriptable类型 合成表
+参数五：Scriptable类型 合成表对应物品的id,data
+例:
+Item.addShapedRecipe(298,1,0,["   ","aaa","a a"],["a",17,0]);
+
+Item.defineArmor(par1int, par2String, par3int, par4String, par5String, par6int, par7int, par8int);
+添加新盔甲
+参数一：int类型 盔甲的id
+参数二：String类型 盔甲图片材质在item.meta中的名字
+参数三：int类型 盔甲图片的材质偏移值，填0就好了
+参数四：String类型 盔甲的名字
+参数五：String类型 在mob文件夹中的盔甲材质
+参数六：int类型 盔甲防御力
+参数七：int类型 最大耐久度
+参数八：int类型 盔甲类型
+
+Item.defineThrowable(par1int, par2String, par3int, par4String, par5int);
+定义可抛出物品
+参数一：int类型 未知
+参数二：String类型 未知
+参数三：int类型 未知
+参数四：String类型 未知
+参数五：int类型 未知
+
+Item.getCustomThrowableRenderType(par1int);
+获取自定义的可抛出物品的渲染类型
+参数一：int类型 物品ID
+返回值：类型待确定 渲染类型
+
+Item.getMaxDamage(par1int);
+获取物品最大耐久值
+参数一：int类型 物品id
+返回值：int类型 耐久值
+
+Item.getMaxStackSize(par1int);
+获取物品最大堆叠大小
+参数一：int类型 物品id
+返回值：int类型 堆叠数值
+
+Item.getName(par1int, par2int, par3boolean);
+获取物品名称
+参数一：int类型 物品id
+参数二：int类型 物品特殊值
+参数三：boolean类型 未知(填true正常获取)
+
+Item.getTextureCoords(par1int, par2int);
+获取物品贴图坐标
+参数一：int类型 物品id
+par2int未知(物品特殊值？)
+
+Item.getUseAnimation(par1int);
+获取物品使用动画
+参数一：int类型 物品ID
+
+Item.internalNameToId(par1String);
+内部名称到ID
+参数一：String类型 名称
+
+Item.isValidItem(par1int);
+检测物品是否有效
+参数一：int类型 物品ID
+返回值：boolean类型 true为是，false为否
+
+Item.setCategory(par1int, par2int,par3int);
+设置物品类型
+参数一：int类型 物品ID
+参数二：int类型 物品特殊值
+参数三：int类型 物品类型(后有物品类型id表)
+
+Item.setEnchantType(par1int, par2int, par3int);
+允许自定义物品附魔类型
+参数一：int类型 物品ID
+参数二：int类型 附魔类型
+参数三：int类型 价值(通常填1，负数或0表示禁用)
+Allows custom items to be enchanted in the enchantment table
+id: the item ID
+type: the type of enchantments supported; one of the EnchantType.* constants
+value: how valuable are the enchantments; usually 1 (a negative or zero value disables enchantment)
+Note: this only works for custom items and blocks.
+附魔类型ID表:
+EnchantType.weapon
+EnchantType.bow
+EnchantType.hoe
+EnchantType.shears
+EnchantType.flintAndSteel
+EnchantType.axe
+EnchantType.pickaxe
+EnchantType.shovel
+EnchantType.fishingRod
+EnchantType.book
+例子:
+Item.setEnchantType(1200, EnchantType.weapon, 1);
+
+Item.setHandEquipped(par1int, par2boolean);
+把物品的手持形态设置为工具形态
+参数一：int类型 物品id
+参数二：boolean类型 
+
+Item.setMaxDamage(par1int, par2int);
+设定物品最大耐久值
+参数一：int类型 物品id
+参数二：int类型 耐久值
+
+Item.setProperties(par1int, par2Object);
+设定物品特性
+参数一：int类型 物品id
+参数二：Object类型 特性 (同items.json中使用方法)
+例：
+Item.setProperties(1, {
+	"use_animation": "eat",
+	"use_duration": 32,
+	"food": {
+		"nutrition": 4,
+		"saturation_modifier": "low",
+		"is_meat": false
+	    }
+	});
+
+Item.setStackedByData(par1int, par2boolean);
+设定物品数据叠加
+参数一：int类型 物品id
+参数二：boolean类型 未知
+
+Item.setUseAnimation(par1int, par2int);
+设置物品使用动画
+参数一：int类型 物品ID
+参数二：int类型 动画ID
+
+Item.translatedNameToId(par1String);
+翻译名字到ID
+参数一：String类型 名字
+返回值：int类型 ID
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+    Block类函数(17条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+Block.defineBlock(par1int, par2String, par3Object, par4Object, par5Object, par6Object);
+自定义方块
+参数一：int类型 方块id
+参数二：String类型 方块名称
+参数三：Object类型 方块材质名字(内外部名称均可)
+参数四：Object类型 材料原id
+参数五：Object类型 是否透明()
+参数六：Object类型 模型
+注：
+参数3格式如下
+[["名称", 排列值], ["名称", 排列值]]
+如果是外部材质，那么材质图片名应定义为"名称_排列值.png"
+调用时名称对应前部分，排列值对应后部分
+例子：
+Block.defineBlock(ropewayId, "滑索", 
+[["ropeway", 0], //下
+["ropeway", 0], //上
+["ropeway", 0], //后
+["ropeway", 0], //前
+["ropeway", 2], //左
+["ropeway", 2], //右
+["ropeway", 1], //特殊值2 同上
+["ropeway", 1], 
+["ropeway", 2], 
+["ropeway", 2], 
+["ropeway", 0], 
+["ropeway", 0]  //后以此类推
+], 52, false, 0);
+
+Block.defineLiquidBlock(par1int, par2String, par3Object, par4Object);
+自定义液体方块
+参数一：int类型 方块ID
+参数二：String类型 方块名称
+参数三：Object类型 方块材质名称(在terrain.meta里的名字引用)(格式：[[材质名],[材质名]]  一为静态时材质，二为流动时材质)
+参数四：Object类型 原材料ID 岩浆ID OR 水ID 会将原材料性质移至本方块
+
+Block.getAllBlockIds();
+获取所有的方块id
+返回值：int类型数组 方块id数组
+
+Block.getDestroyTime(par1int, par2int);
+获取方块破坏的时间
+参数一：int类型 方块id
+参数二：int类型 方块特殊值
+
+Block.getFriction(par1int, par2int);
+获取方块的摩擦力
+参数一：int类型 方块id
+参数二：int类型 方块特殊值
+
+Block.getRenderType(par1int);
+获取方块的模型id
+参数一：int类型 方块的id
+
+Block.getTextureCoords(par1int, par2int, par3int);
+获取方块材质坐标
+参数一：int类型 未知
+参数二：int类型 未知
+参数三：int类型 未知
+返回值：类型待确定 未知
+
+Block.setColor(par1int, par2Scriptable);
+设定方块强制渲染
+参数一：int类型 方块id
+参数二：Scriptable类型 HTML字符(格式为 [HTML字符] )
+
+Block.setDestroyTime(par1int, par2double);
+设定破坏方块的时间
+参数一：int类型 方块id
+参数二：int类型 破坏需要的时间(单位:tick)
+
+Block.setExplosionResistance(par1int, par2double);
+设定方块的抗爆能力
+参数一：int类型 方块id
+参数二：double类型 方块的抗爆能力
+
+Block.setFriction(par1int, par2double);
+设置方块的摩擦力
+参数一：int类型 方块id
+参数二：double类型 摩擦力
+
+Block.setLightLevel(par1int, par2int);
+设定方块的亮度
+参数一：int类型 方块id
+参数二：int类型 方块的亮度(0~15)
+
+Block.setLightOpacity(par1int, par2int);
+设定方块的不透明度
+参数一：int类型 方块id
+参数二：int类型 不透明度
+
+Block.setRedstoneConsumer(par1int, par2boolean);
+设定方块是否会接收到红石的更新
+参数一：int类型 方块id
+参数二：boolean类型 
+与钩子函数配用
+
+Block.setRenderLayer(par1int, par2int);
+设定方块的性质属性
+参数一：int类型 方块id
+参数二：int类型 属性id(全透明为2，半透明为1,不透明为0)
+
+Block.setRenderType(par1int, par2int);
+设置方块的模型
+参数一：int类型 方块的id
+参数二：int类型 模型id
+
+Block.setShape(par1int, par2double, par3double, par4double, par5double, par6double, par7double, par8int);
+设定方块的形状
+参数一：int类型 方块id
+参数二：double类型 方块偏移X轴(开始)
+参数三：double类型 方块偏移Y轴(开始)
+参数四：double类型 方块偏移Z轴(开始)
+参数五：double类型 方块大小X轴(结束)
+参数六：double类型 方块大小Y轴(结束)
+参数七：double类型 方块大小Z轴(结束)
+参数八：int类型 方块特殊值
+
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+    Server类函数(6条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+Server.getAddress();
+获取服务器的IP地址
+返回值：String类型 ip地址
+
+Server.getAllPlayerNames();
+获取服务器所有玩家的名字
+返回值：String类型数组 
+
+Server.getAllPlayers();
+获取服务器所有玩家的实体
+返回值：Object类型数组 
+
+Server.getPort();
+获取服务器的端口
+返回值：int类型 端口
+
+Server.joinServer(par1String, par2int);
+进入服务器
+参数一：String类型 IP地址
+参数二：int类型 端口
+
+Server.sendChat(par1String);
+向服务器发送聊天信息
+参数一：String类型 发送的内容
+
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+		Renderer类函数(10条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+为使注释更易懂，在翻译英文的时候有改动
+
+Renderer.get(id);
+返回所给的渲染类型的渲染器
+(Returns the renderer object with the given render type.)
+id为实体模型id
+
+Renderer.createHumanoidRenderer();
+用一个人体模型创造一个新的渲染类型
+(Creates a new render type with a human model.)
+
+
+==========
+Methods and propertes on renderer objects
+renderer对象的方法与属性
+==========
+renderer.renderType
+一个保存这个渲染器类型ID的变量
+(A read-only variable holding the render type ID for this renderer.)
+
+renderer.model
+一个保存着这个渲染器的模型的变量
+(A read-only variable holding the model object for this renderer.)
+
+
+==========
+Methods and properties on model objects
+model对象的方法与属性
+==========
+model.getPart("partName");
+由所给的部位名称获取这个模型的部位
+(Gets the model part by that given name.)
+partName为名称，如下表：
+head				头
+body				身体
+leftArm			左手
+rightArm		 右手
+leftLeg			左腿
+rightLeg		  右腿
+
+
+==========
+Methods and properties on modelPart objects
+modelPart对象的方法与属性
+==========
+modelPart.setTextureOffset(textureX, textureY, transparent);
+设置该模型部位的纹理在皮肤文件中的位置
+(不会影响到原有部位的皮肤)
+(Sets the location on the skin file where the texture of this model part should be read from.)
+textureX为X轴位置
+textureY为Y轴位置
+transparent为是否透明，一般填true(如果材质有透明的部分，填false会黑)
+
+modelPart.addBox(xOffset, yOffset, zOffset, width, height, depth, scale);
+在这个模型部位上添加一个新的长方体
+(Adds a new box onto the model part.)
+xOffset为X轴起始位置
+yOffset为Y轴起始位置
+zOffset为Z轴起始位置
+width为宽度(X轴)
+height为高度(Y轴)
+depth为(纵)深度(Z轴)(即前后长度)
+scale为放大比例，可空(默认为0)
+
+modelPart.clear();
+清除这个模型部位
+(Removes (clears) a model part.)
+
+modelPart.setTextureSize(width, height);
+设置材质尺寸
+width为宽度
+height为高度
+
+modelPart.setRotationPoint(x, y, z);
+设置这个模型部位旋转的中心点
+(Sets the point in which the model part rotates from.)
+x为X轴坐标
+y为Y轴坐标
+z为Z轴坐标
+
+注：别漏了对象……
+格式：对象.方法();
+
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+		Hook函数(23条)
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+function attackHook(attacker, victim)
+当点击或攻击了一个生物mob(动物，怪物，玩家(待确认))时会触发这个函数，并返回数据。
+attacker:进行了点击或攻击动作的mob
+victim:被点击或攻击的mob
+//可以使用preventDefault()
+
+function chatHook(str)
+聊天钩子
+str:聊天的内容
+//可以使用preventDefault()
+
+function continueDestroyBlock(x, y, z, side, progress)
+持续破坏方块时触发
+x,y,z:方块的坐标
+side:方块从哪个方向被破坏
+progress:破坏方块的进展
+//可以使用preventDefault()
+
+function destroyBlock(x, y, z, side)
+当一个方块被破坏时会触发
+x,y,z:方块的坐标
+side:方块被从哪个方向被破坏 
+//可以使用preventDefault()
+
+function projectileHitEntityHook(projectile,targetEntity)
+当某个抛物线实体(如雪球，鸡蛋)砸中实体时触发
+projectile:实体
+targetEntity:被砸中的实体
+例子:  
+function projectileHitEntityHook(projectile, target)
+{
+ Entity.setVelY(target, 9); 
+ } // snowballs send entities flying up
+
+function eatHook(hearts, saturationRatio)
+吃食物钩子
+hearts:食物补充的饥饿值
+saturationRatio:未知
+
+function entityAddedHook(entity)
+当一个新的实体被添加(包括箭，下落的方块，点燃的TNT等)时会触发
+entity:被添加的自然实体
+
+function entityHurtHook(attacker, victim, halfhearts)
+当实体受到伤害时会触发
+attacker:攻击者
+victim:受害者
+halfhearts:受到的伤害(直译为半颗心)
+注：此条Hook与attackHook的差别在于它能够监测所有实体的攻击动作
+//可以使用preventDefault()
+
+function entityRemovedHook(entity)
+当一个实体(包括箭，下落的方块，点燃的TNT等)消失或死亡时会触发
+entity:被移除的实体
+
+function explodeHook(entity, x, y, z, power, onFire)
+一爆炸触发
+entity:触发爆炸的实体
+x,y,z:坐标
+power:爆炸范围
+onFire:是否引起火灾
+//可以使用preventDefault()
+
+function serverMessageReceiveHook(str)
+接收到服务器信息触发
+str:内容
+//可以使用preventDefault()
+
+function chatReceiveHook(str, sender)
+接到聊天信息触发
+str:内容
+sender:发消息的人
+//可以使用preventDefault()
+
+function leaveGame()
+当离开当前世界(返回主菜单)时会触发
+
+function deathHook(attacker, victim)
+当一个生物mod死亡时会触发
+murderer:造成死亡的实体
+victim:死亡的实体
+//可以使用preventDefault()
+
+function playerAddExpHook(player, experienceAdded)
+在玩家经验增加的时候触发
+player:玩家
+experienceAdded:增加的数目
+//可以使用preventDefault()
+
+function playerExpLevelChangeHook(player, levelsAdded)
+在玩家升级时触发
+player:玩家
+levelsAdded:增加的数目
+//可以使用preventDefault()
+
+function redstoneUpdateHook(x, y, z, newCurrent, worldLoading, blockId, blockDamage)
+当方块被红石充能时触发
+xyz:被充能的方块坐标
+newCurrent:被充能时的信号强度
+worldLoading:是否在已加载地图范围内
+BlockId:被充能方块ID
+BlockDamage:被充能方块特殊值
+配合Block.setRedstoneConsumer使用
+
+function selectLevelHook()
+一加载存档就触发
+比function newLevel()
+快几Tick 
+
+function newLevel()
+当世界被载入时(出现"Building terrain"时)会触发
+
+function startDestroyBlock(x, y, z, side)
+当一个方块开始被破坏时触发
+x,y,z:方块的坐标
+side:方块被从哪个方向破坏 
+//可以使用preventDefault()
+
+function projectileHitBlockHook(projectile, blockX, blockY, blockZ, side)
+当某个抛物线实体(如雪球，鸡蛋)砸中方块时触发
+projectile为实体
+blockX，blockY，blockZ为方块坐标
+side为砸中方块的面
+
+function modTick()
+每刻(1/20s 0.05s)执行一次
+
+function useItem(x, y, z, itemid, blockid, side, itemDamage, blockDamage)
+当进行一次点击时触发这个函数
+x:被点击方块的x坐标
+y:被点击方块的y坐标
+z:被点击方块的z坐标
+itemId:手持物品id
+blockId:方块id
+side:点击的方向
+itemDamage:手持物品特殊值
+blockDamage:方块特殊值
+//可以使用preventDefault()
+
+
+
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+            常量表
+✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯✯
+这是启动器内置的常量，将id以常量形式存储，方便开发者调用
+ChatColor.AQUA;
+ChatColor.BEGIN;
+ChatColor.BLACK;
+ChatColor.BLUE;
+ChatColor.BOLD;
+ChatColor.DARK_AQUA;
+ChatColor.DARK_BLUE;
+ChatColor.DARK_GRAY;
+ChatColor.DARK_GREEN;
+ChatColor.DARK_PURPLE;
+ChatColor.DARK_RED;
+ChatColor.GOLD;
+ChatColor.GRAY;
+ChatColor.GREEN;
+ChatColor.LIGHT_PURPLE;
+ChatColor.RED;
+ChatColor.RESET;
+ChatColor.WHITE;
+ChatColor.YELLOW;
+
+ItemCategory.DECORATION;
+ItemCategory.FOOD;
+ItemCategory.INTERNAL;
+ItemCategory.MATERIAL;
+ItemCategory.TOOL;
+
+ParticleType.angryVillager;
+ParticleType.bubble;
+ParticleType.cloud;
+ParticleType.crit;
+ParticleType.dripLava;
+ParticleType.dripWater;
+ParticleType.enchantmenttable;
+ParticleType.fallingDust;
+ParticleType.flame;
+ParticleType.happyVillager;
+ParticleType.heart;
+ParticleType.hugeexplosion;
+ParticleType.hugeexplosionSeed;
+ParticleType.ink;
+ParticleType.itemBreak;
+ParticleType.largeexplode;
+ParticleType.lava;
+ParticleType.mobFlame;
+ParticleType.note;
+ParticleType.portal;
+ParticleType.rainSplash;
+ParticleType.redstone;
+ParticleType.slime;
+ParticleType.smoke;
+ParticleType.smoke2;
+ParticleType.snowballpoof;
+ParticleType.spell;
+ParticleType.spell2;
+ParticleType.spell3;
+ParticleType.splash;
+ParticleType.suspendedTown;
+ParticleType.terrain;
+ParticleType.waterWake;
+
+EntityType.ARROW;
+EntityType.BAT;
+EntityType.BLAZE;
+EntityType.BOAT;
+EntityType.CAVE_SPIDER;
+EntityType.CHICKEN;
+EntityType.COW;
+EntityType.CREEPER;
+EntityType.EGG;
+EntityType.ENDERMAN;
+EntityType.EXPERIENCE_ORB;
+EntityType.EXPERIENCE_POTION;
+EntityType.FALLING_BLOCK;
+EntityType.FIREBALL;
+EntityType.FISHING_HOOK;
+EntityType.GHAST;
+EntityType.IRON_GOLEM;
+EntityType.ITEM;
+EntityType.LAVA_SLIME;
+EntityType.LIGHTNING_BOLT;
+EntityType.MINECART;
+EntityType.MUSHROOM_COW;
+EntityType.OCELOT;
+EntityType.PAINTING;
+EntityType.PIG;
+EntityType.PIG_ZOMBIE;
+EntityType.PLAYER;
+EntityType.PRIMED_TNT;
+EntityType.RABBIT;
+EntityType.SHEEP;
+EntityType.SILVERFISH;
+EntityType.SKELETON;
+EntityType.SLIME;
+EntityType.SMALL_FIREBALL;
+EntityType.SNOWBALL;
+EntityType.SNOW_GOLEM;
+EntityType.SPIDER;
+EntityType.SQUID;
+EntityType.THROWN_POTION;
+EntityType.VILLAGER;
+EntityType.WOLF;
+EntityType.ZOMBIE;
+EntityType.ZOMBIE_VILLAGER;
+
+EntityRenderType.arrow;
+EntityRenderType.bat;
+EntityRenderType.blaze;
+EntityRenderType.boat;
+EntityRenderType.camera;
+EntityRenderType.chicken;
+EntityRenderType.cow;
+EntityRenderType.creeper;
+EntityRenderType.egg;
+EntityRenderType.enderman;
+EntityRenderType.expPotion;
+EntityRenderType.experienceOrb;
+EntityRenderType.fallingTile;
+EntityRenderType.fireball;
+EntityRenderType.fishHook;
+EntityRenderType.ghast;
+EntityRenderType.human;
+EntityRenderType.ironGolem;
+EntityRenderType.item;
+EntityRenderType.lavaSlime;
+EntityRenderType.lightningBolt;
+EntityRenderType.map;
+EntityRenderType.minecart;
+EntityRenderType.mushroomCow;
+EntityRenderType.ocelot;
+EntityRenderType.painting;
+EntityRenderType.pig;
+EntityRenderType.player;
+EntityRenderType.rabbit;
+EntityRenderType.sheep;
+EntityRenderType.silverfish;
+EntityRenderType.skeleton;
+EntityRenderType.slime;
+EntityRenderType.smallFireball;
+EntityRenderType.snowGolem;
+EntityRenderType.snowball;
+EntityRenderType.spider;
+EntityRenderType.squid;
+EntityRenderType.thrownPotion;
+EntityRenderType.tnt;
+EntityRenderType.unknownItem;
+EntityRenderType.villager;
+EntityRenderType.villagerZombie;
+EntityRenderType.witch;
+EntityRenderType.wolf;
+EntityRenderType.zombie;
+EntityRenderType.zombiePigman;
+
+ArmorType.boots;
+ArmorType.chestplate;
+ArmorType.helmet;
+ArmorType.leggings;
+
+MobEffect.absorption;
+MobEffect.blindness;
+MobEffect.confusion;
+MobEffect.damageBoost;
+MobEffect.damageResistance;
+MobEffect.digSlowdown;
+MobEffect.digSpeed;
+MobEffect.effectIds;
+MobEffect.fireResistance;
+MobEffect.harm;
+MobEffect.heal;
+MobEffect.healthBoost;
+MobEffect.hunger;
+MobEffect.invisibility;
+MobEffect.jump;
+MobEffect.movementSlowdown;
+MobEffect.movementSpeed;
+MobEffect.nightVision;
+MobEffect.poison;
+MobEffect.regeneration;
+MobEffect.saturation;
+MobEffect.waterBreathing;
+MobEffect.weakness;
+MobEffect.wither;
+
+DimensionId.NETHER;
+DimensionId.NORMAL;
+
+BlockFace.DOWN;
+BlockFace.EAST;
+BlockFace.NORTH;
+BlockFace.SOUTH;
+BlockFace.UP;
+BlockFace.WEST;
+
+UseAnimation.bow;
+UseAnimation.normal;
+
+Enchantment.AQUA_AFFINITY;
+Enchantment.BANE_OF_ARTHROPODS;
+Enchantment.BLAST_PROTECTION;
+Enchantment.DEPTH_STRIDER;
+Enchantment.EFFICIENCY;
+Enchantment.FEATHER_FALLING;
+Enchantment.FIRE_ASPECT;
+Enchantment.FIRE_PROTECTION;
+Enchantment.FLAME;
+Enchantment.FORTUNE;
+Enchantment.INFINITY;
+Enchantment.KNOCKBACK;
+Enchantment.LOOTING;
+Enchantment.LUCK_OF_THE_SEA;
+Enchantment.LURE;
+Enchantment.POWER;
+Enchantment.PROJECTILE_PROTECTION;
+Enchantment.PROTECTION;
+Enchantment.PUNCH;
+Enchantment.RESPIRATION;
+Enchantment.SHARPNESS;
+Enchantment.SILK_TOUCH;
+Enchantment.SMITE;
+Enchantment.THORNS;
+Enchantment.UNBREAKING;
+
+EnchantType.all;
+EnchantType.axe;
+EnchantType.book;
+EnchantType.bow;
+EnchantType.fishingRod;
+EnchantType.flintAndSteel;
+EnchantType.hoe;
+EnchantType.pickaxe;
+EnchantType.shears;
+EnchantType.shovel;
+EnchantType.weapon;
+
+BlockRenderLayer.alpha;
+BlockRenderLayer.alpha_seasons;
+BlockRenderLayer.alpha_single_side;
+BlockRenderLayer.blend;
+BlockRenderLayer.doubleside;
+BlockRenderLayer.far;
+BlockRenderLayer.opaque;
+BlockRenderLayer.opaque_seasons;
+BlockRenderLayer.seasons_far;
+BlockRenderLayer.seasons_far_alpha;
+BlockRenderLayer.water;
+
