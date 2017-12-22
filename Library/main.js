@@ -1,4 +1,4 @@
-var ScriptCodeStartTime = 0;   //java.lang.System.currentTimeMillis();
+var ScriptCodeStartTime = 0;     //java.lang.System.currentTimeMillis();
 var ctx = com.mojang.minecraftpe.MainActivity.currentMainActivity.get();
 var lunch_test_dir = "/storage/sdcard0/JavaScriptProjects/Library/";
 var MainValues =
